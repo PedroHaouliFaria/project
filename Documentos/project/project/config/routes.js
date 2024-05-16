@@ -10,6 +10,12 @@
 
 module.exports.routes = {
 
+  '/form': { view: 'pages/crudUserForm' },
+  'GET /user/create': 'UsuarioController.showUserForm',
+  'POST /user/create': 'UsuarioController.create',
+  'GET /user/:id': 'UsuarioController.read',
+  'PUT /user/:id': 'UsuarioController.update',
+
   /***************************************************************************
   *                                                                          *
   * Make the view located at `views/homepage.ejs` your home page.            *
@@ -19,8 +25,8 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': { view: 'pages/homepage' },
-
+  '/': { view: 'pages/crudUserForm' },
+ 
 
   /***************************************************************************
   *                                                                          *
